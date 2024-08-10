@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Recipe Finder</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Search Section -->
+        <section class="search-section container">
+            <h2>Find Your Favorite Recipe</h2>
+            <input type="text" id="searchInput" placeholder="Search recipes..." onkeyup="searchRecipes()">
+        </section>
+
+        <!-- Recipes Menu -->
+        <section class="recipes-menu container">
+            <h2>Recipes Menu</h2>
+            <ul class="recipes-list">
+                <li><a href="#" onclick="showRecipe('grilled-cheese')">Grilled Cheese Sandwich</a></li>
+                <li><a href="#" onclick="showRecipe('spaghetti-bolognese')">Spaghetti Bolognese</a></li>
+                <li><a href="#" onclick="showRecipe('pancakes')">Pancakes</a></li>
+                <li><a href="#" onclick="showRecipe('caesar-salad')">Caesar Salad</a></li>
+                <li><a href="#" onclick="showRecipe('chocolate-cake')">Chocolate Cake</a></li>
+                <li><a href="#" onclick="showRecipe('beef-tacos')">Beef Tacos</a></li>
+            </ul>
+        </section>
+
+        <!-- Recipes Section (Initially Hidden) -->
+        <section id="recipesSection" class="recipes-section container" style="display: none;">
+            <h2>Recipes</h2>
+            <div id="recipesList" class="recipes-grid">
+                <!-- Grilled Cheese Sandwich -->
+                <div id="grilled-cheese" class="recipe-card" style="display: none;">
+                    <h3 class="recipe-title">Grilled Cheese Sandwich</h3>
+                    <img src="Images/grilled-cheese.jpg" alt="Grilled Cheese Sandwich">
+                    <p>A classic comfort food, the Grilled Cheese Sandwich features golden, crispy bread with gooey melted cheese in between. Perfect for a quick lunch or a satisfying snack, this sandwich can be made with various types of cheese to suit your taste.</p>
+                    <p><strong>How to Make:</strong></p>
+                    <ol>
+                        <li>Butter two slices of bread and place them on a hot skillet.</li>
+                        <li>Layer your choice of cheese on one slice of bread.</li>
+                        <li>Top with the second slice of bread, buttered side up.</li>
+                        <li>Cook until golden brown and cheese is melted, flipping once.</li>
+                        <li>Serve hot with a side of tomato soup if desired.</li>
+                    </ol>
+                </div>
+        
+                <!-- Spaghetti Bolognese -->
+                <div id="spaghetti-bolognese" class="recipe-card" style="display: none;">
+                    <h3 class="recipe-title">Spaghetti Bolognese</h3>
+                    <img src="Images/Spaghetti-Bolognese-square-FS.jpg" alt="Spaghetti Bolognese">
+                    <p>This rich and savory Spaghetti Bolognese is a classic Italian dish made with ground beef, tomatoes, and a blend of aromatic herbs and spices. It's a hearty meal that's perfect for family dinners and can be made in advance and frozen for convenience.</p>
+                    <p><strong>How to Make:</strong></p>
+                    <ol>
+                        <li>Sauté chopped onions, garlic, and carrots in a pan until soft.</li>
+                        <li>Add ground beef and cook until browned.</li>
+                        <li>Stir in canned tomatoes, tomato paste, and spices, then simmer for 30 minutes.</li>
+                        <li>Cook spaghetti according to package instructions.</li>
+                        <li>Serve the sauce over the pasta and garnish with Parmesan cheese.</li>
+                    </ol>
+                </div>
+        
+                <!-- Pancakes -->
+                <div id="pancakes" class="recipe-card" style="display: none;">
+                    <h3 class="recipe-title">Pancakes</h3>
+                    <img src="Images/pancakes.jpg" alt="Pancakes">
+                    <p>Fluffy and light, these pancakes are a breakfast favorite. They're quick to make and can be topped with a variety of ingredients like maple syrup, fresh berries, or whipped cream. Perfect for a weekend brunch or a special treat for the family.</p>
+                    <p><strong>How to Make:</strong></p>
+                    <ol>
+                        <li>In a bowl, mix flour, baking powder, sugar, and salt.</li>
+                        <li>In another bowl, whisk eggs, milk, and melted butter.</li>
+                        <li>Combine wet and dry ingredients until just mixed; don't overmix.</li>
+                        <li>Pour batter onto a hot, greased griddle and cook until bubbles form.</li>
+                        <li>Flip and cook until golden brown on both sides. Serve warm.</li>
+                    </ol>
+                </div>
+        
+                <!-- Caesar Salad -->
+                <div id="caesar-salad" class="recipe-card" style="display: none;">
+                    <h3 class="recipe-title">Caesar Salad</h3>
+                    <img src="Images/Caesar Salad.jpg" alt="Caesar Salad">
+                    <p>This Caesar Salad features crisp romaine lettuce tossed in a creamy Caesar dressing with crunchy croutons and Parmesan cheese. It's a perfect side dish or a light meal on its own, known for its tangy flavor and satisfying texture.</p>
+                    <p><strong>How to Make:</strong></p>
+                    <ol>
+                        <li>Chop romaine lettuce and place it in a large bowl.</li>
+                        <li>Add Caesar dressing and toss to coat the lettuce evenly.</li>
+                        <li>Sprinkle with freshly grated Parmesan cheese.</li>
+                        <li>Top with croutons and toss gently.</li>
+                        <li>Serve immediately for the freshest taste.</li>
+                    </ol>
+                </div>
+        
+                <!-- Chocolate Cake -->
+                <div id="chocolate-cake" class="recipe-card" style="display: none;">
+                    <h3 class="recipe-title">Chocolate Cake</h3>
+                    <img src="Images/ChocolateCake.jpg" alt="Chocolate Cake">
+                    <p>This decadent Chocolate Cake is rich, moist, and covered in a luscious chocolate frosting. It's a favorite for birthdays, celebrations, or whenever you need a chocolate fix. This cake is easy to make and sure to impress.</p>
+                    <p><strong>How to Make:</strong></p>
+                    <ol>
+                        <li>Mix flour, cocoa powder, baking powder, and sugar in a bowl.</li>
+                        <li>In another bowl, whisk eggs, milk, and melted butter.</li>
+                        <li>Combine wet and dry ingredients and pour into a greased pan.</li>
+                        <li>Bake at 350°F (175°C) for 30-35 minutes or until a toothpick comes out clean.</li>
+                        <li>Let cool, then frost with chocolate icing and enjoy.</li>
+                    </ol>
+                </div>
+        
+                <!-- Beef Tacos -->
+                <div id="beef-tacos" class="recipe-card" style="display: none;">
+                    <h3 class="recipe-title">Beef Tacos</h3>
+                    <img src="Images/beef-tacos.jpg" alt="Beef Tacos">
+                    <p>Beef Tacos are a delicious and versatile dish with seasoned ground beef wrapped in soft tortillas. You can customize them with various toppings like lettuce, cheese, salsa, and sour cream. Ideal for casual dinners or gatherings.</p>
+                    <p><strong>How to Make:</strong></p>
+                    <ol>
+                        <li>Cook ground beef with taco seasoning until browned.</li>
+                        <li>Warm tortillas in a skillet or microwave.</li>
+                        <li>Fill tortillas with seasoned beef and your choice of toppings.</li>
+                        <li>Top with shredded lettuce, diced tomatoes, cheese, and salsa.</li>
+                        <li>Serve with lime wedges and sour cream if desired.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Recipe Finder. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function searchRecipes() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const recipes = document.querySelectorAll('.recipe-card');
+            let hasResults = false;
+
+            recipes.forEach(recipe => {
+                const title = recipe.querySelector('.recipe-title').textContent.toLowerCase();
+                if (title.includes(input)) {
+                    recipe.style.display = '';
+                    hasResults = true;
+                } else {
+                    recipe.style.display = 'none';
+                }
+            });
+
+            // Show the recipes section if there are search results
+            if (hasResults) {
+                document.getElementById('recipesSection').style.display = 'block';
+            } else {
+                document.getElementById('recipesSection').style.display = 'none';
+            }
+        }
+
+        function showRecipe(recipeId) {
+            const recipes = document.querySelectorAll('.recipe-card');
+            recipes.forEach(recipe => {
+                recipe.style.display = 'none';
+            });
+
+            document.getElementById(recipeId).style.display = 'block';
+            document.getElementById('recipesSection').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
